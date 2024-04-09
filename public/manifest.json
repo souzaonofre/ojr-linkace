@@ -1,0 +1,26 @@
+{
+    "name": "Benotes",
+    "short_name": "Benotes",
+    "start_url": "/",
+    "display": "standalone",
+    "orientation": "natural",
+    "background_color": "#ffffff",
+    "description": "A note taking and bookmarks collecting app",
+    "theme_color": "#FF7700",
+    "icons": [
+        {
+            "src": "./logo_144x144.png",
+            "sizes": "144x144",
+            "type": "image/png"
+        }
+    ],
+    "share_target": {
+        "action": "/c/0/p/create",
+        "method": "GET",
+        "params": {
+            "title": "title",
+            "text": "text",
+            "url": "url"
+        }
+    }
+}

@@ -93,4 +93,13 @@ Route::prefix('v1')->group(function () {
         Route::patch('trash/restore', [TrashController::class, 'restore'])
             ->name('api.trash.restore');
     });
+
+    // auth:sanctum
+    Route::group(['middleware' => 'auth:share,api'], function () {
+        Route::get('posts', [PostController::class, 'index']);
+        Route::get('posts/{id}', [PostController::class, 'show']);
+
+        Route::get('shares/public/me', [PublicShareController::class, 'me']);
+    });
+
 });

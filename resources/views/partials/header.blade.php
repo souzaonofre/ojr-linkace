@@ -30,6 +30,8 @@
     ]
 ]) }}">
 
+<link rel="manifest" href="/manifest.json">
+
 @if(systemsettings('system_custom_header_content') && config('app.demo') === false)
     <!-- Begin of custom header scripts -->
     {!! systemsettings('system_custom_header_content') !!}

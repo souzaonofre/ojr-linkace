@@ -16,3 +16,14 @@ mix.combine([
 
 mix.sass('resources/assets/sass/app.scss', 'assets/dist/css')
   .sass('resources/assets/sass/app-dark.scss', 'assets/dist/css');
+
+mix.webpackConfig({
+  plugins: [
+    new InjectManifest({
+      swSrc: './resources/js/service-worker.js',
+    }),
+  ],
+  output: {
+    publicPath: '',
+  },
+});
