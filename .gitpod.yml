@@ -16,6 +16,8 @@ tasks:
       php artisan key:generate
       php artisan storage:link
       php artisan migrate:fresh --seed
+      php artisan setup:complete
+      php artisan registeruser
       php artisan serve
 
   - name: Install Node dependencies and run Vite
